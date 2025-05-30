@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mansurxyz.www.com</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f8f8;
+    }
+    header {
+      background-color: #ff5722;
+      padding: 16px;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+    }
+    .produk-container {
+      padding: 16px;
+    }
+    .row {
+      display: flex;
+      overflow-x: auto;
+      gap: 12px;
+      padding-bottom: 12px;
+    }
+    .produk {
+      background: white;
+      min-width: 160px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .produk img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .produk h4 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+    .produk p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    .produk button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .produk button:hover {
+      background-color: #218838;
+    }
+    footer {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #ccc;
+    }
+    .wa-button {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .wa-button:hover {
+      background: #1ebc59;
+    }
+  </style>
+</head>
+<body>
+
+<header>👑The King Of Makanan👑</header>
+
+<div class="produk-container">
+  <div class="row">
+    <div class="produk">
+      <img src="https://iili.io/3Lymn4V.md.jpg" alt="Nasi Goreng">
+      <h4>Nasi Goreng</h4>
+      <p>Rp15.000</p>
+      <button onclick="pesan('Nasi Goreng')">Pesan</button>
+    </div>
+    <div class="produk">
+      <img src="https://iili.io/3Q929oX.md.jpg" alt="Ayam Bakar">
+      <h4>Ayam Bakar</h4>
+      <p>Rp20.000</p>
+      <button onclick="pesan('Ayam Bakar')">Pesan</button>
+    </div>
+    <div class="produk">
+      <img src="https://iili.io/3Q9Fc6g.md.jpg" alt="Mie Goreng">
+      <h4>Mie Goreng</h4>
+      <p>Rp12.000</p>
+      <button onclick="pesan('Mie Goreng')">Pesan</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="produk">
+      <img src="https://iili.io/3Q9qJaa.md.jpg" alt="Sate Ayam">
+      <h4>Sate Ayam</h4>
+      <p>Rp18.000</p>
+      <button onclick="pesan('Sate Ayam')">Pesan</button>
+    </div>
+    <div class="produk">
+      <img src="https://iili.io/3Q9zcPV.jpg" alt="Bakso">
+      <h4>Bakso</h4>
+      <p>Rp14.000</p>
+      <button onclick="pesan('Bakso')">Pesan</button>
+    </div>
+    <div class="produk">
+      <img src="https://iili.io/3Q9nn6P.md.jpg" alt="Soto Ayam">
+      <h4>Soto Ayam</h4>
+      <p>Rp13.000</p>
+      <button onclick="pesan('Soto Ayam')">Pesan</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="produk">
+      <img src="https://iili.io/3Q970Xe.md.jpg" alt="Nasi Uduk">
+      <h4>Nasi Uduk</h4>
+      <p>Rp10.000</p>
+      <button onclick="pesan('Nasi Uduk')">Pesan</button>
+    </div>
+    <div class="produk">
+      <img src="https://iili.io/3Q9AwmX.md.jpg" alt="Tahu Tempe">
+      <h4>Tahu Tempe</h4>
+      <p>Rp8.000</p>
+      <button onclick="pesan('Tahu Tempe')">Pesan</button>
+    </div>
+    <div class="produk">
+      <img src="https://iili.io/3Q9cSEu.md.jpg" alt="Gado-Gado">
+      <h4>Gado-Gado</h4>
+      <p>Rp11.000</p>
+      <button onclick="pesan('Gado-Gado')">Pesan</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Kontak Owner: 👑The King Of Makanan👑</p>
+  <p>OWNER : RESTU</p>
+  <P>KELAS : X TKJ MAGDA 2</P>
+  <p>WA: 0812-3456-7890</p>
+  <a href="https://wa.me/6285817074944?text=Halo%20saya%20mau%20pesan%20makanan" target="_blank">
+    <button class="wa-button">Hubungi via WhatsApp</button>
+  </a>
+</footer>
+
+<script>
+  function pesan(namaMakanan) {
+    const nomor = "6285817074944";
+    const pesan = `Halo ka restu, saya ingin memesan ${namaMakanan}. Apakah masih tersedia?`;
+    window.open(`https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`, "_blank");
+  }
+</script>
+
+</body>
+</html>
